@@ -1,6 +1,6 @@
 # AlgoBase
+
 No base, no growth. Learn what really matters.
----
 
 <h3 align="center">🌍 Selecione seu idioma · Select your language</h3>
 
