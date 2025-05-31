@@ -36,7 +36,7 @@ Cada problema aqui foi cuidadosamente escolhido para representar padrões recorr
 
 | Problema | Solução |
 |----------|---------|
-| [704. Binary Search](https://leetcode.com/problems/binary-search) | [Ver solução](./solucoes/binary-search/704-binary-search.md) |
+| [704. Binary Search](https://leetcode.com/problems/binary-search) | [Ver solução](./solucoes/busca-binaria/704-binary-search.md) |
 | [278. First Bad Version](https://leetcode.com/problems/first-bad-version) | [Ver solução](./solucoes/binary-search/278-first-bad-version.md) |
 
 ---

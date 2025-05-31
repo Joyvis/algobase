@@ -36,8 +36,8 @@ Essa técnica reduz o número de comparações drasticamente, sendo ideal para a
 
 ## 🧩 Soluções por linguagem
 
-- 🐍 [Python](./code/python/704-binary-search.py)
-- 💎 Ruby (em breve)
-- 🔷 TypeScript (em breve)
-- 🦫 Go (em breve)
+- [Python](./src/python/704-binary-search/solution.py)
+- Ruby (em breve)
+- TypeScript (em breve)
+- Go (em breve)
 
