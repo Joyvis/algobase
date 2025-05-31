@@ -36,7 +36,7 @@ Essa técnica reduz o número de comparações drasticamente, sendo ideal para a
 
 ## 🧩 Soluções por linguagem
 
-- [Python](../../../src/python/704-binary-search/solution.py)
+- [Python](https://github.com/Joyvis/algobase/blob/main/src/704-binary-search/solution.py)
 - Ruby (em breve)
 - TypeScript (em breve)
 - Go (em breve)
