@@ -30,7 +30,7 @@ Essa técnica reduz o número de comparações drasticamente, sendo ideal para a
   A cada iteração cortamos o espaço de busca pela metade.
 
 - **Complexidade de espaço**: $$O(1)$$
-  Utilizamos apenas variáveis de controle — nenhum espaço adicional significativo é alocado.
+  Utilizamos apenas variáveis de controled, nenhum espaço adicional significativo é alocado.
 
 ---
 
