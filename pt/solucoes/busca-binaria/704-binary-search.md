@@ -43,4 +43,4 @@ Essa técnica reduz o número de comparações drasticamente, sendo ideal para a
 
 ---
 
-🔙 [Voltar à lista de problemas](../index.md)
+🔙 [Voltar à lista de problemas](../../index.md)
