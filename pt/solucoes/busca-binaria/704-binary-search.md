@@ -41,3 +41,6 @@ Essa técnica reduz o número de comparações drasticamente, sendo ideal para a
 - TypeScript (em breve)
 - Go (em breve)
 
+---
+
+🔙 [Voltar à lista de problemas](../index.md)
