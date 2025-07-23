@@ -4,22 +4,17 @@
 # @param {Integer} color
 # @return {Integer[][]}
 def flood_fill(image, sr, sc, color)
-  source = image[sr][sc]
-  return image if source == color
+   source = image[sr][sc]
+   dfs = lambda do |r, c|
+    return if r < 0 || r >= image.length
+    return if c < 0 || c >= image.first.length
+    return if image[r][c] != source || image[r][c] == color
 
-  dfs = lambda do |row, col|
-    return if row < 0 || row >= image.length
-    return if col < 0 || col >= image.first.length
-    return if color == image[row][col] || source != image[row][col]
+    image[r][c] = color
+    directions = [[0, 1], [0,-1], [1,0], [-1,0]]
+    directions.each { dfs.call(r+_1.first, c+_1.last) }
+   end
 
-    image[row][col] = color
-
-    dfs.call(row + 1, col)
-    dfs.call(row - 1, col)
-    dfs.call(row, col + 1)
-    dfs.call(row, col - 1)
-  end
-
-  dfs.call(sr, sc)
-  image
+   dfs.call(sr, sc)
+   image
 end
