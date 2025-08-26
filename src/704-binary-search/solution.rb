@@ -12,21 +12,21 @@ def search(nums, target)
   -1
 end
 
-# recursive solution
+# recursive solution - improved
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer}
-def search(nums, target, l = 0, r = nums.length)
-  mid = (l + r).div(2)
-  return -1 unless l <= r && mid < nums.length
+def search(nums, target, l = 0, r = nums.length - 1)
+    return -1 if l > r
 
-  if target == nums[mid]
-      return mid
-  elsif target < nums[mid]
-      r = mid - 1
-  else
-      l = mid + 1
-  end
+    mid = (l+r).div(2)
+    if nums[mid] == target
+        return mid
+    elsif nums[mid] < target
+        l = mid + 1
+    else
+        r = mid - 1
+    end
 
-  search(nums, target, l, r)
+    search(nums,target, l, r)
 end
