@@ -10,17 +10,15 @@
 # @param {ListNode} head
 # @return {Boolean}
 def hasCycle(head)
-    return false unless head&.next
+  return false unless head&.next
 
-    tortoise = head
-    hare = head.next
-    
-    while hare
-        return true if tortoise == hare
+  tortoise = hare = head
+  while hare&.next
+    tortoise = tortoise.next
+    hare = hare.next&.next
 
-        tortoise = tortoise.next
-        hare = hare.next&.next
-    end
+    return true if hare == tortoise
+  end
 
-    false
+  false
 end
