@@ -18,3 +18,24 @@ def flood_fill(image, sr, sc, color)
    dfs.call(sr, sc)
    image
 end
+
+# Recursive Solution
+# @param {Integer[][]} image
+# @param {Integer} sr
+# @param {Integer} sc
+# @param {Integer} color
+# @return {Integer[][]}
+def flood_fill(image, sr, sc, color, target = image[sr][sc])
+  return image if sr < 0 || sr >= image.length
+  return image if sc < 0 || sc >= image.first.length
+  return image if image[sr][sc] != target || image[sr][sc] == color
+
+  image[sr][sc] = color
+
+  directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
+  directions.each do |r, c|
+    image = flood_fill(image, sr+r, sc+c, color, target)
+  end
+
+  image 
+end
