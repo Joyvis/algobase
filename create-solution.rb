@@ -42,12 +42,12 @@ def abort_with(message)
 end
 
 # Inputs
-problem_id = prompt("LeetCode problem ID (e.g., 53): ")
-abort_with('problem ID is required') if problem_id.nil? || problem_id.empty?
+# problem_id = prompt("LeetCode problem ID (e.g., 53): ")
+# abort_with('problem ID is required') if problem_id.nil? || problem_id.empty?
 
-problem_title = prompt("LeetCode problem title (e.g., Maximum Subarray): ")
+problem_title = prompt("LeetCode problem title (e.g., 53. Maximum Subarray): ")
 abort_with('problem title is required') if problem_title.nil? || problem_title.empty?
-
+problem_id, problem_title = problem_title.split('.')
 lang_name, ext = select_language
 
 slug = slugify(problem_title)
