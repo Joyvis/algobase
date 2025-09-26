@@ -1,22 +1,25 @@
 function floodFill(
-    image: number[][],
-    sr: number,
-    sc: number,
-    color: number,
-    source: number = image[sr][sc]
+  image: number[][],
+  sr: number,
+  sc: number,
+  color: number,
+  source: number = image[sr][sc]
 ): number[][] {
-    if(sr < 0 || sr > image.length - 1) return image;
-    if(sc < 0 || sc > image[0].length - 1) return image;
-    if(image[sr][sc] != source) return image;
-    if(image[sr][sc] === color) return image;
+  if (sr >= image.length || sr < 0) return image;
+  if (sc >= image[0].length || sc < 0) return image;
+  if (image[sr][sc] !== source) return image;
+  if (image[sr][sc] === color) return image;
 
-    image[sr][sc] = color;
+  image[sr][sc] = color;
+  let directions: number[][] = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [-1, 0],
+  ];
+  directions.forEach((d) =>
+    floodFill(image, sr + d[0], sc + d[1], color, source)
+  );
 
-    const directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
-    for (let i = 0; i < directions.length; i++) {
-        const [dr, dc] = directions[i];
-        floodFill(image, sr + dr, sc + dc, color, source);
-    }
-
-    return image
-};
+  return image;
+}
