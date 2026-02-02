@@ -16,7 +16,7 @@ def cloneGraph(node)
     return unless n
 
     return visited[n] if visited[n]
-      
+
     clone = Node.new(n.val, [])
     visited[n] = clone
     n.neighbors.each { |nb| clone.neighbors << dfs.call(nb) }
